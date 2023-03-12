@@ -1,0 +1,12 @@
+build/
+
+src/amfpack.c
+*.obj
+*.lib
+
+
+*.pyc
+__pycache__
+
+
+.idea/
