@@ -1,11 +1,11 @@
-from distutils.extension import Extension
+from setuptools.extension import Extension
 
-from setuptools import setup
+from setuptools import setup, find_packages
 from Cython.Build import cythonize
 
 amf_ext = Extension(
-    name='amfpack',
-    sources=['src/amf.c', 'src/amfpack.pyx'],
+    name='amfpack.amf',
+    sources=['src/amf.c', 'amfpack/amf.pyx'],
     include_dirs=['src'],
 )
 
@@ -16,6 +16,6 @@ setup(
     ext_modules=cythonize(amf_ext, compiler_directives={'language_level': '3'},),
     author='alexanderr',
     url='https://www.github.com/Open-OTP/amfpack',
-    packages=['amfpack'],
+    packages = find_packages(),
     requires=['Cython'],
 )

@@ -1,6 +1,6 @@
 build/
 
-src/amfpack.c
+amfpack/amf.c
 *.obj
 *.lib
 
@@ -10,3 +10,7 @@ __pycache__
 
 
 .idea/
+
+
+*.egg-info/
+dist/

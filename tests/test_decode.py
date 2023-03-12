@@ -1,5 +1,6 @@
 import amfpack
-AMFType = amfpack.AMFType
+from amfpack import AMFType
+
 
 import unittest
 
